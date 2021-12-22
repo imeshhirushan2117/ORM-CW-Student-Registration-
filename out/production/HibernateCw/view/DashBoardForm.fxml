@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #FFFDE4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Rectangle height="550.0" strokeType="INSIDE" width="1000.0">
+         <fill>
+            <LinearGradient endX="0.7333333333333334" endY="0.8793650793650795" startX="0.2412698473249163" startY="0.36507931663876486">
+               <stops>
+                  <Stop color="#4ac29a" />
+                  <Stop color="#bdfff3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="0.7333333333333334" endY="0.8793650793650795" startX="0.2412698473249163" startY="0.36507931663876486">
+               <stops>
+                  <Stop color="#4ac29a" />
+                  <Stop color="#bdfff3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="525.0" layoutX="14.0" layoutY="13.0" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="174.0" />
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="STUDENT REGISTRATION">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-student-64.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <toggleGroup>
+            <ToggleGroup fx:id="tBtn" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="289.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="STUDENTS" toggleGroup="$tBtn">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-student-64%20(1).png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="MANAGE COURSE" toggleGroup="$tBtn">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-curriculum-48.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="405.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="EXIT" toggleGroup="$tBtn">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-imac-exit-48.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </ToggleButton>
+   </children>
+</AnchorPane>

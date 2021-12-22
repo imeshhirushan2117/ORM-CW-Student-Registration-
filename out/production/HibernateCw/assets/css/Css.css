@@ -1,0 +1,25 @@
+.tBtn {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.tBtn:selected {
+
+    -fx-background-color: #78ffd6;
+}
+/*.tBtn:hover{
+    -fx-background-color: #FFEFBA;
+}*/
+
+
+.tBtn .text {
+
+    -fx-fill: Black;
+    -fx-font-weight: bold;
+    -fxfont-size: 15px;
+
+    /* -fx-background-radius: 0 0 0 0;*/
+}
+
+.tBtn .text:selected {
+    -fx-fill: white;
+}
