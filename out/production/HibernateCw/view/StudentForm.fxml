@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -40,6 +41,9 @@
             <TableColumn prefWidth="141.33331298828125" text="Address" />
             <TableColumn prefWidth="158.0" text="Email " />
          </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </TableView>
       <TableView layoutX="23.0" layoutY="329.0" prefHeight="174.0" prefWidth="747.0">
          <columns>
@@ -48,6 +52,9 @@
             <TableColumn prefWidth="176.66668701171875" text="Duration " />
             <TableColumn prefWidth="124.66668701171875" text="Fee" />
          </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </TableView>
    </children>
 </AnchorPane>
