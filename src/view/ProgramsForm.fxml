@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="795.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgramsFormController">
+   <children>
+      <Separator layoutX="25.0" layoutY="24.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="75.0" fitWidth="49.0" layoutX="372.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-curriculum-48.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="447.0" layoutY="24.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="151.0" layoutX="14.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="751.0" />
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="32.0" layoutY="90.0" prefHeight="25.0" prefWidth="128.0" promptText="Program Id : " unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="189.0" layoutY="91.0" prefHeight="25.0" prefWidth="166.0" promptText="Program :" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="382.0" layoutY="93.0" prefHeight="25.0" prefWidth="184.0" promptText="Duration : " unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="594.0" layoutY="93.0" prefHeight="25.0" prefWidth="145.0" promptText="Fee : " unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="256.0" layoutY="164.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="379.0" layoutY="165.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #55efc4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="502.0" layoutY="165.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ff7675; -fx-background-radius: 10;" text="Remove" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="625.0" layoutY="164.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ffeaa7; -fx-background-radius: 10;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="49.0" layoutX="17.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="289.0" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="314.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-search-480.png" />
+         </image>
+      </ImageView>
+      <JFXTextField focusColor="BLACK" layoutX="27.0" layoutY="255.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TableView layoutX="17.0" layoutY="317.0" prefHeight="174.0" prefWidth="751.0">
+        <columns>
+          <TableColumn prefWidth="197.66668701171875" text="Program Id " />
+          <TableColumn prefWidth="252.33331298828125" text="Program" />
+            <TableColumn prefWidth="176.66668701171875" text="Duration " />
+            <TableColumn prefWidth="124.66668701171875" text="Fee" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>

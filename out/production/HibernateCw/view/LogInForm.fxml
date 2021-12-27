@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.LogInFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInFormController">
+   <children>
+      <Rectangle height="400.0" strokeType="INSIDE" width="673.0">
+         <fill>
+            <LinearGradient endX="0.7333333333333334" endY="0.8793650793650795" startX="0.2412698473249163" startY="0.36507931663876486">
+               <stops>
+                  <Stop color="#4ac29a" />
+                  <Stop color="#bdfff3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="0.7333333333333334" endY="0.8793650793650795" startX="0.2412698473249163" startY="0.36507931663876486">
+               <stops>
+                  <Stop color="#4ac29a" />
+                  <Stop color="#bdfff3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="293.0" layoutY="150.0" prefHeight="31.0" prefWidth="334.0" promptText="User Name" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="292.0" layoutY="211.0" prefHeight="31.0" prefWidth="334.0" promptText="Password" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="294.0" layoutY="286.0" onAction="#btnLogInOnAction" prefHeight="31.0" prefWidth="334.0" style="-fx-background-color: #23D959;" text="Log In">
+         <font>
+            <Font name="Bell MT Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="105.0" fitWidth="104.0" layoutX="414.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-user-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="131.0" fitWidth="141.0" layoutX="30.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/clip-136.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="141.0" layoutX="116.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/burgundy-student-hat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="141.0" layoutX="24.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/clip-97.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

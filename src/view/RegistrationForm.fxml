@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="795.0" style="-fx-background-color: white; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
+   <children>
+      <JFXTextField labelFloat="true" layoutX="220.0" layoutY="57.0" prefHeight="25.0" prefWidth="201.0" promptText="Name :">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="452.0" layoutY="61.0" prefHeight="25.0" prefWidth="127.0" promptText="Age :">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="602.0" layoutY="60.0" prefHeight="25.0" prefWidth="168.0" promptText="Contact No :">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="19.0" layoutY="110.0" prefHeight="25.0" prefWidth="289.0" promptText="Address">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="327.0" layoutY="110.0" prefHeight="25.0" prefWidth="255.0" promptText="Email :">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.5257731958762887" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Separator layoutX="15.0" layoutY="23.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="75.0" fitWidth="49.0" layoutX="362.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-student-64.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="437.0" layoutY="23.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
+      <RadioButton fx:id="genderMale" layoutX="617.0" layoutY="118.0" mnemonicParsing="false" selected="true" text="Male">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="genderFemale" layoutX="695.0" layoutY="118.0" mnemonicParsing="false" selected="true" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#f2f2f2" height="173.0" layoutX="18.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="759.0" />
+      <JFXComboBox fx:id="cmdProgramId1" focusColor="BLACK" labelFloat="true" layoutX="38.0" layoutY="178.0" prefHeight="25.0" prefWidth="168.0" promptText="Programme Id" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXTextField fx:id="txtProgramName1" focusColor="BLACK" labelFloat="true" layoutX="224.0" layoutY="178.0" prefHeight="25.0" prefWidth="168.0" promptText="Program" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration1" focusColor="BLACK" labelFloat="true" layoutX="413.0" layoutY="179.0" prefHeight="25.0" prefWidth="168.0" promptText="Duration" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee1" focusColor="BLACK" labelFloat="true" layoutX="601.0" layoutY="179.0" prefHeight="25.0" prefWidth="148.0" promptText="Fee" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmdProgramId2" focusColor="BLACK" labelFloat="true" layoutX="35.0" layoutY="226.0" prefHeight="25.0" prefWidth="168.0" promptText="Programme Id" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXTextField fx:id="txtProgramName2" focusColor="BLACK" labelFloat="true" layoutX="221.0" layoutY="226.0" prefHeight="25.0" prefWidth="168.0" promptText="Program" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration2" focusColor="BLACK" labelFloat="true" layoutX="410.0" layoutY="227.0" prefHeight="25.0" prefWidth="168.0" promptText="Duration" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee2" focusColor="BLACK" labelFloat="true" layoutX="598.0" layoutY="227.0" prefHeight="25.0" prefWidth="148.0" promptText="Fee" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmdProgramId3" focusColor="BLACK" labelFloat="true" layoutX="34.0" layoutY="276.0" prefHeight="25.0" prefWidth="168.0" promptText="Programme Id" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXTextField fx:id="txtProgramName3" focusColor="BLACK" labelFloat="true" layoutX="220.0" layoutY="276.0" prefHeight="25.0" prefWidth="168.0" promptText="Program" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration3" focusColor="BLACK" labelFloat="true" layoutX="409.0" layoutY="277.0" prefHeight="25.0" prefWidth="168.0" promptText="Duration" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee3" focusColor="BLACK" labelFloat="true" layoutX="597.0" layoutY="277.0" prefHeight="25.0" prefWidth="148.0" promptText="Fee" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="405.0" layoutY="347.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="528.0" layoutY="348.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #55efc4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="651.0" layoutY="348.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ff7675; -fx-background-radius: 10;" text="Remove" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="49.0" layoutX="21.0" layoutY="339.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="289.0" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="318.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-search-480.png" />
+         </image>
+      </ImageView>
+      <JFXTextField focusColor="BLACK" layoutX="31.0" layoutY="343.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXTextField>
+      <TableView layoutX="25.0" layoutY="398.0" prefHeight="112.0" prefWidth="747.0">
+        <columns>
+          <TableColumn prefWidth="105.33334350585938" text="Reg No " />
+          <TableColumn prefWidth="125.66665649414062" text="Name " />
+            <TableColumn prefWidth="71.33331298828125" text="Age " />
+            <TableColumn prefWidth="141.33331298828125" text="Contact No " />
+            <TableColumn prefWidth="141.33331298828125" text="Address" />
+            <TableColumn prefWidth="158.0" text="Email " />
+        </columns>
+      </TableView>
+      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="58.0" prefHeight="25.0" prefWidth="181.0" promptText="Reg No :" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+   </children>
+</AnchorPane>

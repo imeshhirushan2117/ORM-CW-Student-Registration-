@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="525.0" prefWidth="795.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <Separator layoutX="25.0" layoutY="24.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="75.0" fitWidth="49.0" layoutX="372.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-student-64%20(1).png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="447.0" layoutY="24.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="49.0" layoutX="22.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="289.0" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="319.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-search-480.png" />
+         </image>
+      </ImageView>
+      <JFXTextField focusColor="BLACK" layoutX="32.0" layoutY="58.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TableView layoutX="23.0" layoutY="137.0" prefHeight="172.0" prefWidth="747.0">
+         <columns>
+            <TableColumn prefWidth="105.33334350585938" text="Reg No " />
+            <TableColumn prefWidth="125.66665649414062" text="Name " />
+            <TableColumn prefWidth="71.33331298828125" text="Age " />
+            <TableColumn prefWidth="141.33331298828125" text="Contact No " />
+            <TableColumn prefWidth="141.33331298828125" text="Address" />
+            <TableColumn prefWidth="158.0" text="Email " />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TableView layoutX="23.0" layoutY="329.0" prefHeight="174.0" prefWidth="747.0">
+         <columns>
+            <TableColumn prefWidth="197.66668701171875" text="Program Id " />
+            <TableColumn prefWidth="252.33331298828125" text="Program" />
+            <TableColumn prefWidth="176.66668701171875" text="Duration " />
+            <TableColumn prefWidth="124.66668701171875" text="Fee" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -31,7 +31,7 @@
          </stroke>
       </Rectangle>
       <Rectangle arcHeight="20.0" arcWidth="20.0" height="525.0" layoutX="14.0" layoutY="13.0" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="174.0" />
-      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="STUDENT REGISTRATION">
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#registrationOnAction" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="REGISTRATION">
          <graphic>
             <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -49,7 +49,7 @@
             <ToggleGroup fx:id="tBtn" />
          </toggleGroup>
       </ToggleButton>
-      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="289.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="STUDENTS" toggleGroup="$tBtn">
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="289.0" mnemonicParsing="false" onAction="#studentManageOnAction" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="STUDENTS" toggleGroup="$tBtn">
          <graphic>
             <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -64,7 +64,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ToggleButton>
-      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="MANAGE COURSE" toggleGroup="$tBtn">
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#programsOnAction" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="Programs" toggleGroup="$tBtn">
          <graphic>
             <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -79,7 +79,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ToggleButton>
-      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="405.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="EXIT" toggleGroup="$tBtn">
+      <ToggleButton contentDisplay="TOP" layoutX="14.0" layoutY="405.0" mnemonicParsing="false" onAction="#exitOnAction" prefHeight="82.0" prefWidth="174.0" styleClass="tBtn" stylesheets="@../assets/css/Css.css" text="EXIT" toggleGroup="$tBtn">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -94,5 +94,6 @@
             </ImageView>
          </graphic>
       </ToggleButton>
+      <AnchorPane fx:id="paneDashBoard" layoutX="195.0" layoutY="14.0" prefHeight="525.0" prefWidth="795.0" />
    </children>
 </AnchorPane>
