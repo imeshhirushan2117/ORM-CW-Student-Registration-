@@ -1,4 +1,6 @@
 package entity;
 
-public interface SuperEntity {
+import java.io.Serializable;
+
+public interface SuperEntity extends Serializable {
 }

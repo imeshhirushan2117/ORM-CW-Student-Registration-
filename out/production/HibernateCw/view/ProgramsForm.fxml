@@ -22,7 +22,7 @@
       </ImageView>
       <Separator layoutX="447.0" layoutY="24.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
       <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="151.0" layoutX="14.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="751.0" />
-      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="32.0" layoutY="90.0" prefHeight="25.0" prefWidth="128.0" promptText="Program Id : " unFocusColor="BLACK">
+      <JFXTextField fx:id="txtProgramId" focusColor="BLACK" labelFloat="true" layoutX="32.0" layoutY="90.0" prefHeight="25.0" prefWidth="128.0" promptText="Program Id : " unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -30,7 +30,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="189.0" layoutY="91.0" prefHeight="25.0" prefWidth="166.0" promptText="Program :" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtProgram" focusColor="BLACK" labelFloat="true" layoutX="189.0" layoutY="91.0" prefHeight="25.0" prefWidth="166.0" promptText="Program :" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -38,7 +38,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="382.0" layoutY="93.0" prefHeight="25.0" prefWidth="184.0" promptText="Duration : " unFocusColor="BLACK">
+      <JFXTextField fx:id="txtDuration" focusColor="BLACK" labelFloat="true" layoutX="382.0" layoutY="93.0" prefHeight="25.0" prefWidth="184.0" promptText="Duration : " unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -46,7 +46,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="594.0" layoutY="93.0" prefHeight="25.0" prefWidth="145.0" promptText="Fee : " unFocusColor="BLACK">
+      <JFXTextField fx:id="txtFee" focusColor="BLACK" labelFloat="true" layoutX="594.0" layoutY="93.0" prefHeight="25.0" prefWidth="145.0" promptText="Fee : " unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -54,7 +54,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="256.0" layoutY="164.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="256.0" layoutY="164.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -62,7 +62,7 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="379.0" layoutY="165.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #55efc4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="379.0" layoutY="165.0" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #55efc4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -70,7 +70,7 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="502.0" layoutY="165.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ff7675; -fx-background-radius: 10;" text="Remove" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="502.0" layoutY="165.0" onAction="#btnRemoveOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ff7675; -fx-background-radius: 10;" text="Remove" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -78,7 +78,7 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="625.0" layoutY="164.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ffeaa7; -fx-background-radius: 10;" text="Clear" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="625.0" layoutY="164.0" onAction="#btnClearOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ffeaa7; -fx-background-radius: 10;" text="Clear" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -92,17 +92,17 @@
             <Image url="@../assets/icons8-search-480.png" />
          </image>
       </ImageView>
-      <JFXTextField focusColor="BLACK" layoutX="27.0" layoutY="255.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtSearch" focusColor="BLACK" layoutX="27.0" layoutY="255.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <TableView layoutX="17.0" layoutY="317.0" prefHeight="174.0" prefWidth="751.0">
+      <TableView fx:id="tblPrograms" layoutX="17.0" layoutY="317.0" prefHeight="174.0" prefWidth="751.0">
         <columns>
-          <TableColumn prefWidth="197.66668701171875" text="Program Id " />
-          <TableColumn prefWidth="252.33331298828125" text="Program" />
-            <TableColumn prefWidth="176.66668701171875" text="Duration " />
-            <TableColumn prefWidth="124.66668701171875" text="Fee" />
+          <TableColumn fx:id="colProgramId" prefWidth="197.66668701171875" text="Program Id " />
+          <TableColumn fx:id="colProgram" prefWidth="252.33331298828125" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="176.66668701171875" text="Duration " />
+            <TableColumn fx:id="colFee" prefWidth="124.66668701171875" text="Fee" />
         </columns>
          <cursor>
             <Cursor fx:constant="HAND" />

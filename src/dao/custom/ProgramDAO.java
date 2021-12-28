@@ -1,4 +1,7 @@
 package dao.custom;
 
-public interface ProgramDAO {
+import dao.SuperDAO;
+import entity.Program;
+
+public interface ProgramDAO extends SuperDAO<Program,String> {
 }

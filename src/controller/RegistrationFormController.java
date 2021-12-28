@@ -2,7 +2,11 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.ToggleGroup;
 
 public class RegistrationFormController {
     public RadioButton genderMale;
@@ -19,4 +23,28 @@ public class RegistrationFormController {
     public JFXTextField txtProgramName3;
     public JFXTextField txtDuration3;
     public JFXTextField txtFee3;
+    public JFXTextField txtName;
+    public JFXTextField txtAge;
+    public JFXTextField txtContactNo;
+    public JFXTextField txtAddress;
+    public JFXTextField txtEmail;
+    public JFXTextField txtSearch;
+    public TableView tblReg;
+    public TableColumn colRegNo;
+    public TableColumn colName;
+    public TableColumn colAge;
+    public TableColumn colContactNo;
+    public TableColumn colAddress;
+    public TableColumn colEmail;
+    public JFXTextField txtRegNo;
+    public ToggleGroup gender;
+
+    public void btnRegisterOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnRemoveOnAction(ActionEvent actionEvent) {
+    }
 }

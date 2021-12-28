@@ -19,7 +19,7 @@
 
 <AnchorPane prefHeight="525.0" prefWidth="795.0" style="-fx-background-color: white; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
    <children>
-      <JFXTextField labelFloat="true" layoutX="220.0" layoutY="57.0" prefHeight="25.0" prefWidth="201.0" promptText="Name :">
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="220.0" layoutY="57.0" prefHeight="25.0" prefWidth="201.0" promptText="Name :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -45,7 +45,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField labelFloat="true" layoutX="452.0" layoutY="61.0" prefHeight="25.0" prefWidth="127.0" promptText="Age :">
+      <JFXTextField fx:id="txtAge" labelFloat="true" layoutX="452.0" layoutY="61.0" prefHeight="25.0" prefWidth="127.0" promptText="Age :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -71,7 +71,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField labelFloat="true" layoutX="602.0" layoutY="60.0" prefHeight="25.0" prefWidth="168.0" promptText="Contact No :">
+      <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="602.0" layoutY="60.0" prefHeight="25.0" prefWidth="168.0" promptText="Contact No :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -97,7 +97,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField labelFloat="true" layoutX="19.0" layoutY="110.0" prefHeight="25.0" prefWidth="289.0" promptText="Address">
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="19.0" layoutY="110.0" prefHeight="25.0" prefWidth="289.0" promptText="Address">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -123,7 +123,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField labelFloat="true" layoutX="327.0" layoutY="110.0" prefHeight="25.0" prefWidth="255.0" promptText="Email :">
+      <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="327.0" layoutY="110.0" prefHeight="25.0" prefWidth="255.0" promptText="Email :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -266,7 +266,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="405.0" layoutY="347.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="405.0" layoutY="347.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -274,7 +274,7 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="528.0" layoutY="348.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #55efc4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="528.0" layoutY="348.0" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #55efc4; -fx-background-radius: 10;" text="Update" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -282,7 +282,7 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="651.0" layoutY="348.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ff7675; -fx-background-radius: 10;" text="Remove" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="651.0" layoutY="348.0" onAction="#btnRemoveOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ff7675; -fx-background-radius: 10;" text="Remove" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -296,24 +296,24 @@
             <Image url="@../assets/icons8-search-480.png" />
          </image>
       </ImageView>
-      <JFXTextField focusColor="BLACK" layoutX="31.0" layoutY="343.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtSearch" focusColor="BLACK" layoutX="31.0" layoutY="343.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></JFXTextField>
-      <TableView layoutX="25.0" layoutY="398.0" prefHeight="112.0" prefWidth="747.0">
+      <TableView fx:id="tblReg" layoutX="25.0" layoutY="398.0" prefHeight="112.0" prefWidth="747.0">
         <columns>
-          <TableColumn prefWidth="105.33334350585938" text="Reg No " />
-          <TableColumn prefWidth="125.66665649414062" text="Name " />
-            <TableColumn prefWidth="71.33331298828125" text="Age " />
-            <TableColumn prefWidth="141.33331298828125" text="Contact No " />
-            <TableColumn prefWidth="141.33331298828125" text="Address" />
-            <TableColumn prefWidth="158.0" text="Email " />
+          <TableColumn fx:id="colRegNo" prefWidth="105.33334350585938" text="Reg No " />
+          <TableColumn fx:id="colName" prefWidth="125.66665649414062" text="Name " />
+            <TableColumn fx:id="colAge" prefWidth="71.33331298828125" text="Age " />
+            <TableColumn fx:id="colContactNo" prefWidth="141.33331298828125" text="Contact No " />
+            <TableColumn fx:id="colAddress" prefWidth="141.33331298828125" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="158.0" text="Email " />
         </columns>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </TableView>
-      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="58.0" prefHeight="25.0" prefWidth="181.0" promptText="Reg No :" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtRegNo" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="58.0" prefHeight="25.0" prefWidth="181.0" promptText="Reg No :" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
