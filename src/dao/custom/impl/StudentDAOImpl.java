@@ -60,4 +60,23 @@ public class StudentDAOImpl implements StudentDAO {
         return list;
 
     }
+
+    @Override
+    public List<String> getAllProgramIds() {
+        return null;
+    }
+
+    @Override
+    public List<Student> searchStudents(String value) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Student s WHERE s.regNo LIKE ?1");
+        query.setParameter(1,'%'+value+'%');
+        List list = query.list();
+
+        transaction.commit();
+        session.close();
+        return list;
+    }
 }

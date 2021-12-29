@@ -5,6 +5,8 @@ import dto.ProgramDTO;
 import javafx.collections.ObservableList;
 import view.tm.ProgramTM;
 
+import java.util.List;
+
 public interface ProgramBO extends SuperBO {
     boolean add(ProgramDTO programDTO);
 
@@ -13,4 +15,12 @@ public interface ProgramBO extends SuperBO {
     boolean delete(String id);
 
     boolean update(ProgramDTO programDTO);
+
+    ObservableList<ProgramTM> search(String value);
+
+    List<String> getAllProgramIds();
+
+    ProgramDTO getProgramDetails(String id);
+
+
 }

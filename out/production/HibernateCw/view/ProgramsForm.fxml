@@ -92,12 +92,12 @@
             <Image url="@../assets/icons8-search-480.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtSearch" focusColor="BLACK" layoutX="27.0" layoutY="255.0" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtSearch" focusColor="BLACK" layoutX="27.0" layoutY="255.0" onKeyReleased="#txtSearchKeyReleased" prefHeight="33.0" prefWidth="265.0" promptText="Search" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="tblPrograms" layoutX="17.0" layoutY="317.0" prefHeight="174.0" prefWidth="751.0">
+      <TableView fx:id="tblPrograms" layoutX="17.0" layoutY="317.0" onMouseClicked="#tblProgramsOnMouseClick" prefHeight="174.0" prefWidth="751.0">
         <columns>
           <TableColumn fx:id="colProgramId" prefWidth="197.66668701171875" text="Program Id " />
           <TableColumn fx:id="colProgram" prefWidth="252.33331298828125" text="Program" />

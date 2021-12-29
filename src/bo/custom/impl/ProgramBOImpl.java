@@ -55,4 +55,29 @@ public class ProgramBOImpl implements ProgramBO {
                 programDTO.getFee()
         ));
     }
+
+    @Override
+    public ObservableList<ProgramTM> search(String value) {
+        List<Program> list = programDAO.searchPrograms(value);
+        ObservableList<ProgramTM> dtoArrayList = FXCollections.observableArrayList();
+        for (Program program : list
+        ) {
+            dtoArrayList.add(new ProgramTM(
+                    program.getProgramId(),
+                    program.getProgramName(),
+                    program.getDuration(),
+                    program.getFee()));
+        }
+        return dtoArrayList;
+    }
+
+    @Override
+    public List<String> getAllProgramIds() {
+        return programDAO.getAllProgramIds();
+    }
+
+    @Override
+    public ProgramDTO getProgramDetails(String id) {
+        return programDAO.getProgramList(id);
+    }
 }

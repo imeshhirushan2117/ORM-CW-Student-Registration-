@@ -2,6 +2,7 @@ package dao.custom.impl;
 
 
 import dao.custom.ProgramDAO;
+import dto.ProgramDTO;
 import entity.Program;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -57,5 +58,59 @@ public class ProgramDAOIMPL implements ProgramDAO {
         transaction.commit();
         session.close();
         return list;
+    }
+
+    @Override
+    public List<Program> searchPrograms(String value) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Program p WHERE p.programId LIKE ?1");
+        query.setParameter(1, '%' + value + '%');
+        List list = query.list();
+
+        transaction.commit();
+        session.close();
+        return list;
+    }
+
+    @Override
+    public List<String> getAllProgramIds() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT p.programId FROM Program p");
+        List<String> list = query.list();
+
+        transaction.commit();
+        session.close();
+        return list;
+    }
+
+    @Override
+    public ProgramDTO getProgramList(String id) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Program p WHERE p.programId = ?1");
+        query.setParameter(1, id);
+        List<Program> resultList = query.getResultList();
+
+        transaction.commit();
+        session.close();
+        ProgramDTO programDTO = null;
+        if (!resultList.isEmpty()) {
+            for (Program list : resultList
+            ) {
+                programDTO = new ProgramDTO(
+                        list.getProgramName(),
+                        list.getDuration(),
+                        list.getFee()
+                );
+            }
+            return programDTO;
+        } else {
+            return null;
+        }
     }
 }

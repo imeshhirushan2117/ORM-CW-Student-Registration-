@@ -18,4 +18,6 @@ public class StudentFormController {
     public TableColumn colProgram;
     public TableColumn colDuration;
     public TableColumn colFee;
+
+
 }
