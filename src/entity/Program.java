@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,8 +14,8 @@ public class Program implements SuperEntity {
     private String duration;
     private double fee;
 
-    @ManyToMany
-    private List<Student> students;
+    @ManyToMany(mappedBy = "programList")
+    private List<Student> students = new ArrayList<>();
 
     public Program() {
     }
@@ -24,6 +25,14 @@ public class Program implements SuperEntity {
         this.programName = programName;
         this.duration = duration;
         this.fee = fee;
+    }
+
+    public Program(String programId, String programName, String duration, double fee, List<Student> students) {
+        this.programId = programId;
+        this.programName = programName;
+        this.duration = duration;
+        this.fee = fee;
+        this.students = students;
     }
 
     public String getProgramId() {
@@ -58,6 +67,14 @@ public class Program implements SuperEntity {
         this.fee = fee;
     }
 
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
     @Override
     public String toString() {
         return "Program{" +
@@ -65,6 +82,7 @@ public class Program implements SuperEntity {
                 ", programName='" + programName + '\'' +
                 ", duration='" + duration + '\'' +
                 ", fee=" + fee +
+                ", students=" + students +
                 '}';
     }
 }

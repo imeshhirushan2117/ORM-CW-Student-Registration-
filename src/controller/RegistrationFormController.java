@@ -6,8 +6,11 @@ import bo.custom.impl.StudentBOImpl;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import dao.DAOFactory;
+import dao.custom.impl.StudentDAOImpl;
 import dto.ProgramDTO;
 import dto.StudentDTO;
+import entity.Student;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -56,18 +59,24 @@ public class RegistrationFormController {
 
     StudentBOImpl studentBO = (StudentBOImpl) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.STUDENT);
     ProgramBOImpl programBO = (ProgramBOImpl) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.PROGRAM);
+    StudentDAOImpl studentDAO = (StudentDAOImpl) DAOFactory.getDAOFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
+    String cmb1, cmb2, cmb3;
 
     public void initialize() {
         showStudentOnTable();
         loadProgramId();
         cmdProgramId1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setProgramData(txtProgramName1, txtDuration1, txtFee1, newValue);
+            cmb1=newValue;
         });
         cmdProgramId2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setProgramData(txtProgramName2, txtDuration2, txtFee2, newValue);
+            cmb2=newValue;
         });
+
         cmdProgramId3.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setProgramData(txtProgramName3, txtDuration3, txtFee3, newValue);
+            cmb3=newValue;
         });
         setDisable();
     }
@@ -83,17 +92,17 @@ public class RegistrationFormController {
     }
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
-        StudentDTO studentDTO = new StudentDTO(
-                txtRegNo.getText(),
-                txtName.getText(),
-                Integer.parseInt(txtAge.getText()),
-                txtContactNo.getText(),
-                txtAddress.getText(),
-                txtEmail.getText(),
-                SelectGender()
-        );
-        if (studentBO.add(studentDTO)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Programme Added").show();
+        Student student1 = new Student();
+        student1.setRegNo(txtRegNo.getText());
+        student1.setName(txtName.getText());
+        student1.setAge(Integer.parseInt(txtAge.getText()));
+        student1.setContactNo(txtContactNo.getText());
+        student1.setAddress(txtAddress.getText());
+        student1.setEmail(txtEmail.getText());
+        student1.setGender(SelectGender());
+
+        if (studentDAO.register(student1, cmb1, cmb2, cmb3)) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Student Register").show();
             showStudentOnTable();
             clearTexts();
         } else {
@@ -115,7 +124,7 @@ public class RegistrationFormController {
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
-        StudentTM selectedItem = tblReg.getSelectionModel().getSelectedItem();
+      /*  StudentTM selectedItem = tblReg.getSelectionModel().getSelectedItem();
         String studentId = selectedItem.getRegNo();
         StudentDTO studentDTO = new StudentDTO(
                 txtRegNo.getText(),
@@ -125,8 +134,9 @@ public class RegistrationFormController {
                 txtAddress.getText(),
                 txtEmail.getText(),
                 SelectGender()
-        );
-        if (studentBO.update(studentDTO)) {
+        );*/
+
+        if (studentDAO.updateRegister(txtRegNo.getText(), cmb1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Program Updated").show();
             showStudentOnTable();
             clearTexts();
@@ -155,6 +165,12 @@ public class RegistrationFormController {
             txtContactNo.setText(selectedProgram.getContactNo());
             txtAddress.setText(selectedProgram.getAddress());
             txtEmail.setText(selectedProgram.getEmail());
+
+            if(selectedProgram.getGender().equals("Male")){
+                genderMale.setSelected(true);
+            }else if (selectedProgram.getGender().equals("Female")){
+                genderFemale.setSelected(true);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
