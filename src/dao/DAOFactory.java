@@ -2,6 +2,7 @@ package dao;
 
 
 import dao.custom.impl.ProgramDAOIMPL;
+import dao.custom.impl.QueryDAOIMPL;
 import dao.custom.impl.StudentDAOImpl;
 
 public class DAOFactory {
@@ -15,18 +16,20 @@ public class DAOFactory {
         }
         return daoFactory;
     }
-    public SuperDAO getDAO(DAOTypes types) {
+    public SuperDAOUltra getDAO(DAOTypes types) {
         switch (types) {
             case STUDENT:
                 return new StudentDAOImpl();
             case PROGRAM:
                 return new ProgramDAOIMPL();
+            case Query:
+                return new QueryDAOIMPL();
             default:
                 return null;
         }
     }
 
     public enum DAOTypes {
-        STUDENT, PROGRAM
+        STUDENT, PROGRAM,Query
     }
 }

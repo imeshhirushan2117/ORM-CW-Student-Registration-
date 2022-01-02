@@ -20,7 +20,7 @@
 
 <AnchorPane prefHeight="525.0" prefWidth="795.0" style="-fx-background-color: white; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
    <children>
-      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="220.0" layoutY="57.0" prefHeight="25.0" prefWidth="201.0" promptText="Name :">
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="220.0" layoutY="57.0" onKeyReleased="#registrationKeyReleased" prefHeight="25.0" prefWidth="201.0" promptText="Name :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -46,7 +46,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtAge" labelFloat="true" layoutX="452.0" layoutY="61.0" prefHeight="25.0" prefWidth="127.0" promptText="Age :">
+      <JFXTextField fx:id="txtAge" labelFloat="true" layoutX="452.0" layoutY="61.0" onKeyReleased="#registrationKeyReleased" prefHeight="25.0" prefWidth="127.0" promptText="Age :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -72,7 +72,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="602.0" layoutY="60.0" prefHeight="25.0" prefWidth="168.0" promptText="Contact No :">
+      <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="602.0" layoutY="60.0" onKeyReleased="#registrationKeyReleased" prefHeight="25.0" prefWidth="168.0" promptText="Contact No :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -98,7 +98,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="19.0" layoutY="110.0" prefHeight="25.0" prefWidth="289.0" promptText="Address">
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="19.0" layoutY="110.0" onKeyReleased="#registrationKeyReleased" prefHeight="25.0" prefWidth="289.0" promptText="Address">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -124,7 +124,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="327.0" layoutY="110.0" prefHeight="25.0" prefWidth="255.0" promptText="Email :">
+      <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="327.0" layoutY="110.0" onKeyReleased="#registrationKeyReleased" prefHeight="25.0" prefWidth="255.0" promptText="Email :">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -264,7 +264,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="405.0" layoutY="347.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="405.0" layoutY="347.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -309,7 +309,7 @@
             <TableColumn fx:id="colGender" prefWidth="83.33331298828125" text="Gender" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtRegNo" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="58.0" prefHeight="25.0" prefWidth="181.0" promptText="Reg No :" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtRegNo" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="58.0" onKeyReleased="#registrationKeyReleased" prefHeight="25.0" prefWidth="181.0" promptText="Reg No :" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

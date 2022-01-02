@@ -22,7 +22,7 @@
       </ImageView>
       <Separator layoutX="447.0" layoutY="24.0" prefHeight="4.0" prefWidth="330.0" style="-fx-background-color: black;" />
       <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="151.0" layoutX="14.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="751.0" />
-      <JFXTextField fx:id="txtProgramId" focusColor="BLACK" labelFloat="true" layoutX="32.0" layoutY="90.0" prefHeight="25.0" prefWidth="128.0" promptText="Program Id : " unFocusColor="BLACK">
+      <JFXTextField fx:id="txtProgramId" focusColor="BLACK" labelFloat="true" layoutX="32.0" layoutY="90.0" onKeyReleased="#programeKeyReleased" prefHeight="25.0" prefWidth="128.0" promptText="Program Id : " unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -30,7 +30,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtProgram" focusColor="BLACK" labelFloat="true" layoutX="189.0" layoutY="91.0" prefHeight="25.0" prefWidth="166.0" promptText="Program :" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtProgram" focusColor="BLACK" labelFloat="true" layoutX="189.0" layoutY="91.0" onKeyReleased="#programeKeyReleased" prefHeight="25.0" prefWidth="166.0" promptText="Program :" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -38,7 +38,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtDuration" focusColor="BLACK" labelFloat="true" layoutX="382.0" layoutY="93.0" prefHeight="25.0" prefWidth="184.0" promptText="Duration : " unFocusColor="BLACK">
+      <JFXTextField fx:id="txtDuration" focusColor="BLACK" labelFloat="true" layoutX="382.0" layoutY="93.0" onKeyReleased="#programeKeyReleased" prefHeight="25.0" prefWidth="184.0" promptText="Duration : " unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -46,7 +46,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtFee" focusColor="BLACK" labelFloat="true" layoutX="594.0" layoutY="93.0" prefHeight="25.0" prefWidth="145.0" promptText="Fee : " unFocusColor="BLACK">
+      <JFXTextField fx:id="txtFee" focusColor="BLACK" labelFloat="true" layoutX="594.0" layoutY="93.0" onKeyReleased="#programeKeyReleased" prefHeight="25.0" prefWidth="145.0" promptText="Fee : " unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -54,7 +54,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="256.0" layoutY="164.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+      <JFXButton fx:id="btnRegisterId" buttonType="RAISED" layoutX="256.0" layoutY="164.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0984e3; -fx-background-radius: 10;" text="Register" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

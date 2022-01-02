@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
-public interface SuperDAO <Entity extends SuperEntity,Id> {
+public interface SuperDAO <Entity extends SuperEntity,Id> extends SuperDAOUltra {
     boolean add(Entity entity);
 
     boolean update(Entity entity);

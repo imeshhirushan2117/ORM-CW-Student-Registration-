@@ -3,6 +3,7 @@ package controller;
 import bo.BOFactory;
 import bo.custom.impl.ProgramBOImpl;
 import bo.custom.impl.StudentBOImpl;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -15,11 +16,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import util.Validation;
 import view.tm.StudentTM;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class RegistrationFormController {
     public RadioButton genderMale;
@@ -56,15 +61,39 @@ public class RegistrationFormController {
     public JFXCheckBox checkBox1;
     public JFXCheckBox checkBox2;
     public JFXCheckBox checkBox3;
+    public JFXButton btnRegister;
 
     StudentBOImpl studentBO = (StudentBOImpl) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.STUDENT);
     ProgramBOImpl programBO = (ProgramBOImpl) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.PROGRAM);
     StudentDAOImpl studentDAO = (StudentDAOImpl) DAOFactory.getDAOFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
     String cmb1, cmb2, cmb3;
 
+    LinkedHashMap<JFXTextField, Pattern> map = new LinkedHashMap<>();
+    Pattern studentIdPattern = Pattern.compile("^(R)[-]?[0-9]{3}$");
+    Pattern studentNamePattern = Pattern.compile("^[A-z ]{1,30}$");
+    Pattern studentAddressPattern = Pattern.compile("^[A-z0-9/]{6,30}$");
+    Pattern studentTeleNumberPattern = Pattern.compile("^[0-9]{10}$");
+    Pattern studentAgePattern = Pattern.compile("^[0-9]{2}$");
+    Pattern studentEmailPattern = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+
+
+    private void storeValidations() {
+        map.put(txtRegNo,studentIdPattern);
+        map.put(txtName,studentNamePattern);
+        map.put(txtAge,studentAgePattern);
+        map.put(txtContactNo,studentTeleNumberPattern);
+        map.put(txtAddress,studentAddressPattern);
+        map.put(txtEmail,studentEmailPattern);
+    }
+
+
+
+
+
     public void initialize() {
         showStudentOnTable();
         loadProgramId();
+        storeValidations();
         cmdProgramId1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setProgramData(txtProgramName1, txtDuration1, txtFee1, newValue);
             cmb1=newValue;
@@ -124,17 +153,6 @@ public class RegistrationFormController {
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
-      /*  StudentTM selectedItem = tblReg.getSelectionModel().getSelectedItem();
-        String studentId = selectedItem.getRegNo();
-        StudentDTO studentDTO = new StudentDTO(
-                txtRegNo.getText(),
-                txtName.getText(),
-                Integer.parseInt(txtAge.getText()),
-                txtContactNo.getText(),
-                txtAddress.getText(),
-                txtEmail.getText(),
-                SelectGender()
-        );*/
 
         if (studentDAO.updateRegister(txtRegNo.getText(), cmb1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Program Updated").show();
@@ -246,5 +264,19 @@ public class RegistrationFormController {
         txtProgramName3.setDisable(true);
         txtDuration3.setDisable(true);
         txtFee3.setDisable(true);
+    }
+
+    public void registrationKeyReleased(KeyEvent keyEvent) {
+        btnRegister.setDisable(true);
+        Object response = Validation.validate(map,btnRegister,"Green");
+        if (keyEvent.getCode()== KeyCode.ENTER) {
+            if (response instanceof TextField){
+                TextField error  = (TextField) response;
+                error.requestFocus();
+            }else if (response instanceof Boolean){
+                new Alert(Alert.AlertType.CONFIRMATION, "Done").show();
+            }
+        }
+
     }
 }
